@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
   <!--  -->
 <head>
     <link rel="icon" type="image/x-icon" href="https://logosandtypes.com/wp-content/uploads/2020/11/eurowings.svg">
@@ -31,8 +31,9 @@
 
       try {
           const response = await fetch(url);
-          const cards = await response.json();
+          const status = await response.json();
           displayEvents(status);
+          console.log(status);
       } catch (error) {
           console.error('Error fetching Vatsim data:', error);
       }
@@ -66,10 +67,9 @@
   // Fetch events on page load
   fetchTrelloEvents();
 </script>
-<!-- https://logosandtypes.com/wp-content/uploads/2020/11/eurowings.svg -->
 <body>
-    <div class="status">
-
+    <div class="container-fluid status p-5">
+        <div class="h1">Hello</div>
     </div>
 </body>
 </html>
